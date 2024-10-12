@@ -8,8 +8,8 @@ from machine import Pin
  
 intled = machine.Pin("LED", machine.Pin.OUT)
   
-ssid = 'VM0746127'
-password = '7kjkhwRSsqt5'
+ssid = ''
+password = ''
  
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
