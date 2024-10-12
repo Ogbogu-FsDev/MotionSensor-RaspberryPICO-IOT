@@ -1,4 +1,4 @@
-# Motion Sensor
+# MotionSensor
 
 Welcome! I am going to build a "Motion Sensor" - Working with IOT devices.
 Using Python programming to alert its user through its local network, the Raspberry Pi Pico W provides its own IP Address to send & recieve date via MicroPython.
