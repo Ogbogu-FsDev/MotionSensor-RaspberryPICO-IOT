@@ -1,7 +1,7 @@
 # MotionSensor
 
 Welcome! I am going to build a "Motion Sensor" - Working with IOT devices.
-Using Python programming and the Raspberry Pi Pico W as well as PIR sensor, buzzer and RGB LED. I will building reliable and cost effcient alarm system. 
+Using Micro Python programming and the Raspberry Pi Pico W as well as PIR sensor, buzzer and RGB LED. I will building reliable and cost effcient alarm system. 
 
 The aim of this project is to alert the user when motion is detected via a local web server, everytime the motion is detected I am going to use MicroPython and any other eternal sources for logging that data in either a txt or cloud files.
 
