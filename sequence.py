@@ -20,15 +20,24 @@ buzzer.duty_u16(1000)
 
 # Activating the alarm system    
 def Active():
-    print(PIR.value())
     if PIR.value() == 1:
+        print(PIR.value())
         buzzer.freq(750)
         Led_R.duty_u16(65535)
         Led_G.duty_u16(0)
         Led_B.duty_u16(0)
         utime.sleep(3)
     else:
+        print(PIR.value())
         buzzer.deinit()
         Led_R.duty_u16(0)
         Led_G.duty_u16(65535)
         Led_B.duty_u16(0)
+        
+def InActive():
+    if PIR.value() == 0:
+        print("Alarm Deactivated")
+        Led_R.duty_u16(0)
+        Led_G.duty_u16(0)
+        Led_B.duty_u16(65535)
+        utime.sleep(300)
