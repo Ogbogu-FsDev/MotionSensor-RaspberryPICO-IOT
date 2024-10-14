@@ -22,29 +22,35 @@ html = """<!DOCTYPE html>
             <title>Motion Sensor</title>
             <style>
             body {
-                background-color: wheat;
+                background-color: black;
+                text-align: center;
             }
             h1, h2 {
-                color: maroon;
-                text-align: center;
+                color: lightgreen;
                 text-decoration: underline;
                 font-weight: bold;
             }
-            .alarm {
-                color: maroon;
-                text-align: center;
-                font-size: 36px;
+            .alarm, .led {
+                color: lightgreen;
+                font-size: 30px;
             }
-            67
             </style>
         </head>
         <body>
-            <h1>Motion Sensor. w/ Raspberry Pi Pico W</h1>
-            <h2>System Settings</h2>
+            <h1>Pico W: Motion Sensor</h1>
+            <h2>System Call</h2>
             <br>
+            
+            <div class="led">
+            <h3>Onboard LED</h3>
+            <a href='/LEDon'><button>LED On</button></a>
+            <a href='/LEDoff'><button>LED Off</button></a>
+            </div>
+            
             <div class="alarm">
-            <a href='/on'><button>Alarm On</button></a>
-            <a href='/off'><button>Alarm Off</button></a>
+            <h3>Alarm Settings</h3>
+            <a href='/ALARMon'><button>Alarm On</button></a>
+            <a href='/ALARMoff'><button>Alarm Off</button></a>
             </div>
             
         </body>
@@ -87,17 +93,31 @@ while True:
 
         request = cl.recv(1024)
         print(request)
-
         request = str(request)
-        led_on = request.find('/on')
-        led_off = request.find('/off')
-
+    
+        led_on = request.find('/LEDon')
+        led_off = request.find('/LEDoff')
+        
+        alarm_on = request.find('/ALARMon')
+        alarm_off = request.find('/ALARMoff')
+        
+        # Onboard LED Controls
         if led_on == 6:
-            print(" on")
+            print(" LED is on")
+            while True:
+                LEDon()
+        if led_off == 6:
+            print(" LED is off")
+            while True:
+                LEDoff()
+                
+        # Alarm System Controls
+        if alarm_on == 6:
+            print(" Alarm is on")
             while True:
                 Active()
-        elif led_off == 6:
-            print(" off")
+        if alarm_off == 6:
+            print(" Alarm is off")
             while True:
                 InActive()
                 
