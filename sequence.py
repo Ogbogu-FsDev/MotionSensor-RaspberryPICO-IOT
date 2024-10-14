@@ -1,6 +1,17 @@
 from machine import Pin, PWM, Timer, I2C
 import utime
 
+def LEDon(): # Onboard LED - Flash setting
+    inled = Pin("LED", Pin.OUT)
+    utime.sleep_ms(100)
+    inled.value(1)
+    utime.sleep_ms(100)
+    inled.value(0)
+    
+def LEDoff(): # Onboard LED - Off
+    inled = Pin("LED", Pin.OUT)
+    inled.value(0)  
+
 # PIR (Motion) Sensor
 PIR = Pin(0, Pin.IN, Pin.PULL_DOWN)
 
