@@ -37,6 +37,7 @@ Storage space on this drive or filesystem:
 </ul>
 <br>
 
+<img align="left" src="https://www.diyprojectslab.com/wp-content/uploads/2022/11/Raspberry-pi-pico-W-Led-blinking.gif" />
 <div align="left">
 <h3><b>Stage 1 - Circuit-Board:</b></h3>
 <p>Detect whether someone was present in the sensor detection area through the Raspberry Pi Pico W.
@@ -52,6 +53,7 @@ emits infrared rays with a specific wavelength of about 10um. The infrared light
 body is enhanced by the Philippine filter and then concentrated on the infrared induction source.</p>
 </div>
 
+<img width=500 align="right" src="https://how2electronics.com/wp-content/uploads/2022/11/Pi-Pico-W-Webserver-MicroPython.jpg" />
 <div align="left">
 <h3><b>Stage 2 - Web Server:</b></h3>
 <p>Now that the projects basic programming is underway, its time to focus on making a sufficent web server for remote control access. Remote control access alarm system can be useful when;
@@ -65,13 +67,14 @@ body is enhanced by the Philippine filter and then concentrated on the infrared 
 Within the project over time I apply all of these features to my project and mark them off one by one.</p>
 </div>
 
-<div align="left">
-<h3><b>Stage 3 - Data Logging:</b></h3>
-<p>The final part of the project will consist of recording data and logging this data on the web server so that we can convert and save this into txt files.</p
+<img width=300  height=250 align="left" src="https://i.pinimg.com/originals/fb/68/41/fb6841b5b9701782a9dd24bd6702da5a.gif"/>
+<img width=300  height=250 align="right" src="https://i.pinimg.com/originals/a2/b4/ae/a2b4ae4ebabcd10ff10a1581366f6df2.gif"/>
+<div align="center">
+<h3><b> Stage 3 - Data Logging - .txt file:</b></h3>
+<p> The Next stage will cover data logging to a (txt) file, part of the project will consist of recording data and logging this data on the web server so that we can convert and save this into txt files.</p
 </div>
-
-<div align="left">
-<h3><b>Stage 4 - Data Logging:</b></h3>
-<p>The final part of the project will consist of recording data and logging this data on the web server so that we can convert and save this into txt files.</p
+<div align="center">
+<h3><b> Stage 4 - Data Logging - cloud computing:</b></h3>
+<p> The final part of the project will consist of recording data and logging this data on the web server so that we can convert and save this into txt files.</p
 </div>
 <br>
