@@ -1,0 +1,12 @@
+                                Raspberry Pi Pico - Motion Sensor - Data Logging
+
+Date: 2024-10-21    |    Time: 01:37:17    |    State: Motion Detected!    |    Temp: 28.91698
+Date: 2024-10-21    |    Time: 01:37:20    |    State: Motion Detected!    |    Temp: 30.32141
+Date: 2024-10-21    |    Time: 01:37:23    |    State: Motion Detected!    |    Temp: 30.32141
+Date: 2024-10-21    |    Time: 01:37:29    |    State: Motion Detected!    |    Temp: 30.32141
+Date: 2024-10-21    |    Time: 01:37:32    |    State: Motion Detected!    |    Temp: 30.32141
+Date: 2024-10-21    |    Time: 01:37:37    |    State: Motion Detected!    |    Temp: 30.32141
+Date: 2024-10-21    |    Time: 01:37:40    |    State: Motion Detected!    |    Temp: 30.32141
+Date: 2024-10-21    |    Time: 01:37:46    |    State: Motion Detected!    |    Temp: 30.32141
+Date: 2024-10-21    |    Time: 01:37:51    |    State: Motion Detected!    |    Temp: 30.78955
+Date: 2024-10-21    |    Time: 01:37:58    |    State: Motion Detected!    |    Temp: 30.32141
