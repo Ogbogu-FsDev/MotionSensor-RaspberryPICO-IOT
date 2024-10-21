@@ -80,9 +80,4 @@ The buzzer is set to a frequency of '750' and reset after three seconds, unless 
   The web server will also come in handy to view data remotely.
 </p>
 </div>
-<div align="center">
-<h3><b> Stage 4 - Data Logging - cloud computing:</b></h3>
-<p> cloud computing is the delivery of computing services—including servers,
-  storage, databases, networking, software and more.</p>
-</div>
 <br>
