@@ -6,7 +6,8 @@ import machine
 from sequence import *
 from data import *
 from machine import Pin
- 
+
+# Identify Local Network
 intled = machine.Pin("LED", machine.Pin.OUT)
   
 ssid = s_id
@@ -16,6 +17,7 @@ wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 wlan.connect(ssid, password)
 
+# HTML - Web Page
 html = """<!DOCTYPE html>
     <html>
         <head>
@@ -57,7 +59,7 @@ html = """<!DOCTYPE html>
     </html>
 """
  
-# Wait for connect or fail
+# Waiting to connect or fail
 max_wait = 10
 while max_wait > 0:
     if wlan.status() < 0 or wlan.status() >= 3:
@@ -80,7 +82,6 @@ addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
 s = socket.socket()
 s.bind(addr)
 s.listen(1)
- 
 print('listening on', addr)
 
 stateis = ""
@@ -106,22 +107,21 @@ while True:
             print(" LED is on")
             while True:
                 LEDon()
-        if led_off == 6:
+        elif led_off == 6:
             print(" LED is off")
             while True:
                 LEDoff()
                 
         # Alarm System Controls
-        if alarm_on == 6:
+        elif alarm_on == 6:
             print(" Alarm is on")
             while True:
                 Active()
-        if alarm_off == 6:
+        elif alarm_off == 6:
             print(" Alarm is off")
             while True:
                 InActive()
                 
-         
         response = html + stateis
         
         cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
