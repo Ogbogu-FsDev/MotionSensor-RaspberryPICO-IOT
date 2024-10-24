@@ -19,45 +19,125 @@ wlan.connect(ssid, password)
 
 # HTML - Web Page
 html = """<!DOCTYPE html>
-    <html>
-        <head>
-            <title>Motion Sensor</title>
-            <style>
-            body {
-                background-color: black;
-                text-align: center;
-            }
-            h1, h2 {
-                color: lightgreen;
-                text-decoration: underline;
-                font-weight: bold;
-            }
-            .alarm, .led {
-                color: lightgreen;
-                font-size: 30px;
-            }
-            </style>
-        </head>
-        <body>
-            <h1>Pico W: Motion Sensor</h1>
-            <h2>System Call</h2>
-            <br>
-            
-            <div class="led">
-            <h3>Onboard LED</h3>
-            <a href='/LEDon'><button>LED On</button></a>
-            <a href='/LEDoff'><button>LED Off</button></a>
-            </div>
-            
-            <div class="alarm">
-            <h3>Alarm Settings</h3>
-            <a href='/ALARMon'><button>Alarm On</button></a>
-            <a href='/ALARMoff'><button>Alarm Off</button></a>
-            </div>
-            
-        </body>
-    </html>
-"""
+            <html>
+                <head>
+                    <title>Motion Sensor</title>
+                    <style>
+                    .container {
+                        display: grid;
+                        grid-template-columns: 16rem 1fr 16rem;
+                        grid-template-rows: auto 1fr auto;
+                        grid-template-areas:
+                            "header header header"
+                            "nav content sidebar"
+                            "footer footer footer";
+                        min-height: 100vh;
+                    }
+                    header {
+                        grid-area: header;
+                        padding: 2rem;
+                        background-color: burlywood;
+                    }
+                    .title {
+                        font-family: cursive;
+                        color: maroon;
+                        text-decoration: underline;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-top: auto;
+                    }
+                    nav {
+                        grid-area: nav;
+                        padding: 2rem;
+                        background-color: bisque;
+                    }
+                    main {
+                        grid-area: content;
+                        padding: 2rem;
+                        background-color: rgb(236, 202, 139);
+                    }
+                    .settings {
+                        font-family: cursive;
+                        color: black;
+                        text-align: left;
+                    }
+                    aside {
+                        grid-area: sidebar;
+                        padding: 2rem;
+                        background-color: bisque;
+                    }
+                    footer {
+                        grid-area: footer;
+                        padding: 2rem;
+                        background-color: burlywood;
+                    }
+                    @media (max-width:1024px) {
+                        .container {
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: auto minmax(5rem, auto) 1fr  minmax(5rem, auto) auto;
+                            grid-template-areas:
+                            "header"
+                            "nav"
+                            "content"
+                            "sidebar"
+                            "footer";
+                            min-height: 100vh;
+                        }
+                    }
+                    .button {
+                        background-color: #ecba30;
+                        border: none;
+                        color: white;
+                        padding: 16px 40px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        cursor: pointer;
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    .button1 {
+                        background-color: #a04b06;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <header>
+                            <h1 class="title">Raspberry Pi PICO W - Motion Sensor</h1>
+                        </header>
+                        <nav>Navbar</nav>
+                        <main>
+                            <h2 class="title">Frame</h2>
+                            <div>
+                                <p>
+                                    <i class="fas fa-lightbulb fa-3x" style="color:#ecba30;"></i>
+                                    <a href=\"1\"><button class="button">XXXX</button></a>
+                                    <i class="far fa-lightbulb fa-3x" style="color:#a04b06;"></i>
+                                    <a href=\"2\"><button class="button button1">XXXX</button></a>
+                                </p>
+                            </div>
+                        </main>
+                        <aside>
+                            <h2 class="title">System</h2>
+                                <h4 class="settings">O. LED</h4>
+                                    <a href='/LEDon'><button>LED On</button></a>
+                                    <a href='/LEDoff'><button>LED Off</button></a>
+                                <h4 class="settings">Activate Alarm</h4>
+                                    <a href='/ALARMon'><button>Alarm On</button></a>
+                                    <a href='/ALARMoff'><button>Alarm Off</button></a>
+                                <h4 class="settings">Silence Buzzer</h4>
+                                    <a href='/mute'><button>Mute</button></a>
+                                    <a href='/unmute'><button>Unmute</button></a>
+                        </aside>
+                        <footer>Footer</footer>
+                    </div>
+                </body>
+            </html>
+        """
  
 # Waiting to connect or fail
 max_wait = 10
@@ -104,23 +184,16 @@ while True:
         
         # Onboard LED Controls
         if led_on == 6:
-            print(" LED is on")
             while True:
                 LEDon()
-        elif led_off == 6:
-            print(" LED is off")
-            while True:
-                LEDoff()
-                
+                if led_off == 6:
+                    break
         # Alarm System Controls
-        elif alarm_on == 6:
-            print(" Alarm is on")
+        if alarm_on == 6:
             while True:
                 Active()
-        elif alarm_off == 6:
-            print(" Alarm is off")
-            while True:
-                InActive()
+                if alarm_off == 6:
+                    break
                 
         response = html + stateis
         
