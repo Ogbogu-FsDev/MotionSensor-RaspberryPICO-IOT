@@ -1,13 +1,13 @@
-# MotionSensor
+# Motion Sensor
 
 <div align="center">
 <img align="left" src="https://media.tenor.com/lJ3nu6akejIAAAAM/smoke-alarms-market.gif" />
 <img align="right" src="https://media.tenor.com/lJ3nu6akejIAAAAM/smoke-alarms-market.gif" />
 
 Welcome! I am going to build a "Motion Sensor" - Working with micro-controllers and IOT devices.
-Using Micro Python programming with a Raspberry Pi Pico W, PIR sensor, buzzer and RGB LED. With these eltronic componets I am striding to build a reliable and efficient remote access alarm system.
+Using Micro Python programming with a Raspberry Pi Pico W, PIR sensor, buzzer and RGB LED. With these electronic components I am striding to build a reliable and efficient remote access alarm system.
 
-The aim of this project is to activate an alarm system, manually, automatically or remotely. The project is able to make an alarm noise to ward off trespassers, when activated. Once the alarm has been tripped it then alerts the users when motion is detected via a local web server as well as control the sensor's functionality, everytime motion is detected it will record the Date and Time of the detection by logging data into a .txt file and/or cloud files.
+The aim of this project is to activate an alarm system, manually, automatically or remotely. The project is able to make an alarm noise to ward off trespassers, when activated. Once the alarm has been tripped it then alerts the users when motion is detected via a local web server as well as control the sensor's functionality, every time motion is detected it will record the Date and Time of the detection by logging data into a .txt file and/or cloud files.
 
 This project is ideal for monitoring pet in/out goings. From birds nest, cat flaps, hamster wheel. A various range of ideas to be hosted by this motion sensing project.
 
