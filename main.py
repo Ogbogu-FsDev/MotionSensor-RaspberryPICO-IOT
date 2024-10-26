@@ -184,16 +184,16 @@ while True:
         
         # Onboard LED Controls
         if led_on == 6:
-            while True:
-                LEDon()
-                if led_off == 6:
-                    break
+            LEDon()
+        if led_off == 6:
+            LEDoff()
         # Alarm System Controls
         if alarm_on == 6:
             while True:
                 Active()
-                if alarm_off == 6:
-                    break
+        if alarm_on == 6:
+            InActive()
+                
                 
         response = html + stateis
         
