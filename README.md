@@ -44,10 +44,10 @@ Storage space on this drive or filesystem:
 Raspberry PICO W | RGB LED | BUZZER | PIR Sensor |
 --- | --- | --- | --- |
 GP0 |   |   | S |
-GP2 | B |   |   |
+GP2 | R |   |   |
 GP3 | G |   |   |
-GP4 | R |   |   |
-GP12 |   | B |   |
+GP4 | B |   |   |
+GP14 |   | Buz |   |
 3V3 |   |   | + |
 GND | - | - | - |
 </p>
