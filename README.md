@@ -50,9 +50,14 @@ GP4 | R |   |   |
 GP12 |   | B |   |
 3V3 |   |   | + |
 GND | - | - | - |
-
 </p>
 
+<p>
+<b>Current Project Issues:</b> 
+whilst working on this project i have encountered a few issue, here i will state the current issues with my project and upadate my read me on my resolve.
+- <b>wifi connection</b> - make sure to turn the PICO on and off for a fresh restart, this makes it easier to connect to the wifi with out any errors occuring.
+- <b>buzzer</b> - recieves electricty causing the buzzer to be triggered when the alarm system is in occurence with the 'else' statment and 'buzzer.deinit()' is declared but proves not to work.
+</p>
 <img align="left" src="https://www.diyprojectslab.com/wp-content/uploads/2022/11/Raspberry-pi-pico-W-Led-blinking.gif" />
 <div align="left">
 <h3><b>Stage 1 - Circuit-Board:</b></h3>
