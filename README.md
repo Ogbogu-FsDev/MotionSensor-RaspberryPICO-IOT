@@ -1,9 +1,6 @@
 # Motion Sensor
 
 <div align="center">
-<img align="left" src="https://media.tenor.com/lJ3nu6akejIAAAAM/smoke-alarms-market.gif" />
-<img align="right" src="https://media.tenor.com/lJ3nu6akejIAAAAM/smoke-alarms-market.gif" />
-
 Welcome! I am going to build a "Motion Sensor" - Working with micro-controllers and IOT devices.
 Using Micro Python programming with a Raspberry Pi Pico W, PIR sensor, buzzer and RGB LED. With these electronic components I am striding to build a reliable and efficient remote access alarm system.
 
@@ -54,9 +51,9 @@ GND | - | - | - |
 
 <p>
 <b>Current Project Issues:</b> 
-whilst working on this project i have encountered a few issue, here i will state the current issues with my project and upadate my read me on my resolve.
-- <b>wifi connection</b> - make sure to turn the PICO on and off for a fresh restart, this makes it easier to connect to the wifi with out any errors occuring.
-- <b>buzzer</b> - recieves electricty causing the buzzer to be triggered when the alarm system is in occurence with the 'else' statment and 'buzzer.deinit()' is declared but proves not to work.
+whilst working on this project I have encountered a few issue, here I will state the current issues with my project and update my read me on my resolve.
+- <b>WIFI connection</b> - make sure to turn the PICO on and off for a fresh restart, this makes it easier to connect to the WIFI with out any errors occurring.
+- <b>buzzer</b> - receives electricity causing the buzzer to be triggered when the alarm system is in occurrence with the 'else' statement and 'buzzer.deinit()' is declared but proves not to work.
 </p>
 <img align="left" src="https://www.diyprojectslab.com/wp-content/uploads/2022/11/Raspberry-pi-pico-W-Led-blinking.gif" />
 <div align="left">
@@ -67,7 +64,7 @@ emits infrared rays with a specific wavelength of about 10um. The infrared light
 body is enhanced by the Philippine filter and then concentrated on the infrared induction source.</p>
 
 <p>Detecting whether someone was present in the sensor detection area through the Raspberry Pi Pico W.
-If a person is detected, the light will be turned on, and in acordance the buzzer will activate making a noise that will last the duration
+If a person is detected, the light will be turned on, and in accordance the buzzer will activate making a noise that will last the duration
 of the PIR sensor motion detection which is set to detect motion at the value of '1', then buzzer and LED will activate simultaneously.
 Once the PIR sensor has detected motion, from a green static RGB LED it will then change colour to red and the buzzer will activate.
 The buzzer is set to a frequency of '750' and reset after three seconds, unless motion is detected again.
@@ -90,9 +87,7 @@ The buzzer is set to a frequency of '750' and reset after three seconds, unless 
 </p>
 </div>
 
-<img width=250  height=250 align="left" src="https://i.pinimg.com/originals/fb/68/41/fb6841b5b9701782a9dd24bd6702da5a.gif"/>
-<img width=250  height=250 align="right" src="https://i.pinimg.com/originals/a2/b4/ae/a2b4ae4ebabcd10ff10a1581366f6df2.gif"/>
-<div align="center">
+<div align="left">
 <h3><b> Stage 3 - Data Logging - .txt file:</b></h3>
 <p> The Next stage will cover data logging to a (txt) file,
   part of the project will consist of recording data and logging this data in a txt file.
